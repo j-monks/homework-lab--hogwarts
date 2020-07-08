@@ -18,7 +18,7 @@ student2.save()
 
 
 all_students = Student.all()
-
+find_student_1 = Student.find(student1.id)
 
 binding.pry
 nil
