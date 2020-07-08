@@ -1,8 +1,9 @@
 require_relative('../db/sql_runner')
 
 class Student
-
-  attr_reader :first_name, :last_name, :house, :age, :id, :house_id
+    
+  attr_reader :id 
+  attr_accessor :first_name, :last_name, :house, :age, :house_id
 
   def initialize( options )
     @id = options['id'].to_i
@@ -50,13 +51,11 @@ class Student
     return result
   end
 
-
   def find_house()
     sql = "SELECT * FROM houses WHERE id = $1"
     values = [@house_id]
-    house = SqlRunner.run( sql, values )
-    result = House.new( house.first )
-    return result
+    house = SqlRunner.run(sql, values).first
+    return House.new(house)
   end
 
 end

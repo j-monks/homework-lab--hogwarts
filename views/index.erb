@@ -4,7 +4,7 @@
       <li>
         <%= student.first_name %>
         <%= student.last_name %>
-        <% @house = Student.find_house(student.house_id) %>
+        <%@house = student.find_house() %>
         <%= @house.name %>
         <%= student.age %>
       </li>
