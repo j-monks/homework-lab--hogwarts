@@ -51,9 +51,9 @@ class Student
   end
 
 
-  def self.find_house(house_id)
+  def find_house()
     sql = "SELECT * FROM houses WHERE id = $1"
-    values = [house_id]
+    values = [@house_id]
     house = SqlRunner.run( sql, values )
     result = House.new( house.first )
     return result

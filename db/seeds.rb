@@ -33,7 +33,7 @@ student2.save()
 
 all_students = Student.all()
 find_student_1 = Student.find(student1.id)
-# find_student1_house = Student.find_house(student1.house_id)
+house_student1 = student1.find_house()
 
 binding.pry
 nil
