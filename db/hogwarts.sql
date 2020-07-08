@@ -1,4 +1,5 @@
 DROP TABLE students;
+DROP TABLE houses;
 
 CREATE TABLE students (
     id SERIAL PRIMARY KEY,
@@ -8,3 +9,9 @@ CREATE TABLE students (
     age INT
 
 );
+
+CREATE TABLE houses (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    logo VARCHAR(255)
+)
