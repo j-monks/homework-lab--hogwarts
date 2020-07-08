@@ -35,6 +35,7 @@ house4 = House.new({'name' => 'Ravenclaw', 'logo' => 'https://www.google.com/sea
 house4.save()
 
 all_houses = House.all()
+find_house1 = House.find(house1.id)
 
 binding.pry
 nil
